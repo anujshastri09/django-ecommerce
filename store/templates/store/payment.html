@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Razorpay Payment</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+
+<h2>Pay for your order</h2>
+
+<p>Total: ₹{{ order.orderitem_set.all|sum:'product.price' }}</p>
+
+<form id="razorpay-form">
+    <script
+        src="https://checkout.razorpay.com/v1/checkout.js"
+        data-key="{{ razorpay_key }}"
+        data-amount="{{ payment.amount }}"
+        data-currency="INR"
+        data-order_id="{{ payment.id }}"
+        data-buttontext="Pay Now"
+        data-name="My E-Commerce Store"
+        data-description="Order #{{ order.id }}"
+        data-theme.color="#3399cc">
+    </script>
+</form>
+
+</body>
+</html>
