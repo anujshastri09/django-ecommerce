@@ -7,3 +7,4 @@ A fully functional e-commerce website built with Django, featuring:
 - Razorpay / Stripe payment integration
 - Order history
 - Bootstrap 5 UI
+"# glory" 
